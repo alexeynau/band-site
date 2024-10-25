@@ -5,6 +5,9 @@ services:
     container_name: web
     expose:
       - "80"
+    networks:
+      web-network:
+      
   caddy:
     image: caddy:latest
     restart: unless-stopped
