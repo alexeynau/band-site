@@ -1,0 +1,24 @@
+services:
+  web:
+    build: .
+    restart: unless-stopped
+    container_name: web
+    expose:
+      - "80"
+  caddy:
+    image: caddy:latest
+    restart: unless-stopped
+    container_name: caddy_proxy
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./_data/caddy/data:/data
+      - ./_data/caddy/config:/config
+    networks:
+      web-network:
+
+networks:
+  web-network:
+    driver: bridge

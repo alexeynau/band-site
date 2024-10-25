@@ -1,0 +1,60 @@
+/* Устанавливаем фоновое изображение */
+.main-bg {
+    background-image: url("images/background2.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+/* Стили для логотипа и заголовка */
+.logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.band-name {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+/* Стили для ссылки и кнопок */
+.card {
+    max-width: 700px;
+    width: 100%;
+}
+
+/* Стили для иконок и кнопок соцсетей и музыкальных площадок */
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.social-icon, .music-icon {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    transition: background-color 0.3s;
+    flex: 1 1 auto;
+    text-align: center;
+    min-width: 140px;
+}
+
+.social-icon:hover, .music-icon:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Адаптивность: для мобильных устройств делаем ссылки вертикальными */
+@media (max-width: 767.98px) {
+    .social-icon, .music-icon {
+        flex: 1 1 100%;
+        margin: 5px 0;
+    }
+}
