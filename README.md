@@ -2,7 +2,11 @@
 Сайт хостится на домене https://pkdshu.ru
 
 ## Требования
-* Усановленный Docker
+* Установленный [Docker](https://github.com/docker/docker-install)
+```bash
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+```
 
 ## Локальный запуск
 Соберите образ:
